@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Standard Model</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.3.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.3.1/core.js"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="header-content">
+        <h1 class="header-title">
+            <button id="menu-btn">☰</button>
+            <img src="assets/the-almighty.png" class="logo">
+            <span class="title-text">The Standard Model</span>
+        </h1>
+    </div>
+</header>
+
+<div class="app-container">
+
+    <!-- LEFT SIDEBAR - PROGRESS -->
+    <aside class="sidebar">
+        <div class="timeline" id="progress"></div>
+    </aside>
+
+    <!-- CENTER - MAIN CONTENT -->
+    <main class="content">
+        <div class="content-inner">
+            <h1 class="content-title" id="title">Apple</h1>
+            
+            <div class="image-container" id="image-container">
+                <img id="main-image" src="assets/slide1" alt="visual">
+            </div>
+
+            <div class="nav-buttons">
+                <button id="back" class="btn btn-secondary">
+                    Previous
+                </button>
+                <button id="next" class="btn btn-primary">
+                    Next
+                </button>
+            </div>
+
+            <div class="progress-indicator">
+                <div class="progress-dots" id="progress-dots"></div>
+            </div>
+
+            <p class="credit-text">
+            These explanations are very simplified versions of teachings from Professor David Tong.
+            </p>
+        </div>
+    </main>
+
+    <!-- Preview -->
+    <aside class="standard-model-panel">
+        <div class="panel-header">
+            <h2>The Elementary Particles</h2>
+        </div>
+
+        <div class="standard-model-grid">
+            
+            <!-- QUARKS -->
+            <div class="particle-group">
+                <div class="group-label">Quarks</div>
+                
+                <!-- Generation 1 -->
+                <div id="u" class="particle-card quark">
+                    <div class="particle-symbol">u</div>
+                    <div class="particle-name">up</div>
+                    <div class="particle-meta">
+                        <span>2.3 MeV</span>
+                        <span>+⅔</span>
+                    </div>
+                </div>
+
+                <div id="c" class="particle-card quark">
+                    <div class="particle-symbol">c</div>
+                    <div class="particle-name">charm</div>
+                    <div class="particle-meta">
+                        <span>1.28 GeV</span>
+                        <span>+⅔</span>
+                    </div>
+                </div>
+
+                <div id="t" class="particle-card quark">
+                    <div class="particle-symbol">t</div>
+                    <div class="particle-name">top</div>
+                    <div class="particle-meta">
+                        <span>173 GeV</span>
+                        <span>+⅔</span>
+                    </div>
+                </div>
+
+                <!-- Generation 2 -->
+                <div id="d" class="particle-card quark">
+                    <div class="particle-symbol">d</div>
+                    <div class="particle-name">down</div>
+                    <div class="particle-meta">
+                        <span>4.7 MeV</span>
+                        <span>-⅓</span>
+                    </div>
+                </div>
+
+                <div id="s" class="particle-card quark">
+                    <div class="particle-symbol">s</div>
+                    <div class="particle-name">strange</div>
+                    <div class="particle-meta">
+                        <span>95 MeV</span>
+                        <span>-⅓</span>
+                    </div>
+                </div>
+
+                <div id="b" class="particle-card quark">
+                    <div class="particle-symbol">b</div>
+                    <div class="particle-name">bottom</div>
+                    <div class="particle-meta">
+                        <span>4.18 GeV</span>
+                        <span>-⅓</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEPTONS -->
+            <div class="particle-group">
+                <div class="group-label">Leptons</div>
+                
+                <div id="e" class="particle-card lepton">
+                    <div class="particle-symbol">e</div>
+                    <div class="particle-name">electron</div>
+                    <div class="particle-meta">
+                        <span>0.511 MeV</span>
+                        <span>-1</span>
+                    </div>
+                </div>
+
+                <div id="mu" class="particle-card lepton">
+                    <div class="particle-symbol">μ</div>
+                    <div class="particle-name">muon</div>
+                    <div class="particle-meta">
+                        <span>106 MeV</span>
+                        <span>-1</span>
+                    </div>
+                </div>
+
+                <div id="tau" class="particle-card lepton">
+                    <div class="particle-symbol">τ</div>
+                    <div class="particle-name">tau</div>
+                    <div class="particle-meta">
+                        <span>1.78 GeV</span>
+                        <span>-1</span>
+                    </div>
+                </div>
+
+                <div id="ve" class="particle-card lepton">
+                    <div class="particle-symbol">ν<sub>e</sub></div>
+                    <div class="particle-name">e neutrino</div>
+                    <div class="particle-meta">
+                        <span>&lt;2 eV</span>
+                        <span>0</span>
+                    </div>
+                </div>
+
+                <div id="vmu" class="particle-card lepton">
+                    <div class="particle-symbol">ν<sub>μ</sub></div>
+                    <div class="particle-name">μ neutrino</div>
+                    <div class="particle-meta">
+                        <span>&lt;2 eV</span>
+                        <span>0</span>
+                    </div>
+                </div>
+
+                <div id="vtau" class="particle-card lepton">
+                    <div class="particle-symbol">ν<sub>τ</sub></div>
+                    <div class="particle-name">τ neutrino</div>
+                    <div class="particle-meta">
+                        <span>&lt;2 eV</span>
+                        <span>0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOSONS (Row 3) -->
+            <div class="particle-group bosons">
+                <div class="group-label">Gauge Bosons</div>
+                
+                <div id="g" class="particle-card boson">
+                    <div class="particle-symbol">g</div>
+                    <div class="particle-name">gluon</div>
+                    <div class="particle-meta">
+                        <span>0</span>
+                        <span>0</span>
+                    </div>
+                </div>
+
+                <div id="photon" class="particle-card boson">
+                    <div class="particle-symbol">γ</div>
+                    <div class="particle-name">photon</div>
+                    <div class="particle-meta">
+                        <span>0</span>
+                        <span>0</span>
+                    </div>
+                </div>
+
+                <div id="z" class="particle-card boson">
+                    <div class="particle-symbol">Z</div>
+                    <div class="particle-name">Z boson</div>
+                    <div class="particle-meta">
+                        <span>91.2 GeV</span>
+                        <span>0</span>
+                    </div>
+                </div>
+
+                <div id="w" class="particle-card boson">
+                    <div class="particle-symbol">W</div>
+                    <div class="particle-name">W boson</div>
+                    <div class="particle-meta">
+                        <span>80.4 GeV</span>
+                        <span>±1</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Higgs boson-->
+            <div class="particle-group higgs-group">
+                <div class="group-label">Scalar Boson</div>
+                
+                <div id="h" class="particle-card higgs">
+                    <div class="particle-symbol">H</div>
+                    <div class="particle-name">Higgs</div>
+                    <div class="particle-meta">
+                        <span>125 GeV</span>
+                        <span>0</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </aside>
+
+</div>
+
+<script type="py" src="./py/main.py" config="pyscript.toml"></script>
+
+</body>
+</html>
